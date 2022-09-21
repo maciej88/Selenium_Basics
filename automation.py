@@ -1,5 +1,8 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 
-chrome_browser = webdriver.Chrome('./chromedriver')
+service = Service(executable_path='./chromedriver')
+
+chrome_browser = webdriver.Chrome(service=service)
 
 chrome_browser.maximize_window()
